@@ -23,7 +23,6 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
 
 <title>Product List</title>
 </head>
-
 <body>
 <%-- <sec:authorize access="hasRole('ROLE_ADMIN','ROLE_USER')"> --%>
  <%-- <jsp:include page="header.jsp" /> --%> 
@@ -50,8 +49,13 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
       <li><a href="productView">Products</a></li> 
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="signup"><span class="glyphicon glyphicon-user" ></span> Sign Up</a></li>
+      <!-- <li><a href="signup"><span class="glyphicon glyphicon-user" ></span> Sign Up</a></li>
       <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+       -->
+       <!--  <div class="cart-btn-cont" > -->
+      <li><a href="/viewCart"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
+        
+    <!-- </div> -->
     </ul>
   </div>
 </nav>
@@ -77,7 +81,8 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
             <td>${prd.category}</td>
             <td>${prd.price}</td>
             <td>${prd.status}</td>
-            <td><a href="details/${prd.id}">Details</a> </td>  
+            <td><a href="details/${prd.id}">Details</a> </td>
+            <td><a href="Cart/${prd.id}">Add to Cart</a> </td>  
           </tr> 
            
         </c:forEach> 

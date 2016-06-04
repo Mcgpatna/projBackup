@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 //import dao.productDAOImpl;;
@@ -49,6 +50,15 @@ public class homeController {
 	private static String UPLOAD_LOCATION="E:/MCG-DT/Flower/src/main/webapp/resources/images/";
 	
 	//String message = "Welcome to Spring MVC!";
+	
+	 @RequestMapping(value="/email/{id}")//,method=RequestMethod.POST) //(value="/email")
+	    public String email(@PathVariable("id") int id,Model model)
+	    {
+	    	System.out.println("inside email()");
+	    	model.addAttribute("products",p.getProductById(id));
+	    	model.addAttribute("pid",id);
+	    	return "email";
+	    }
 	 
 	@RequestMapping(value="/details/{id}",method=RequestMethod.GET)
 	public String showDetails(@PathVariable("id") int id,Model model) {
@@ -60,6 +70,19 @@ public class homeController {
 		
 		return "details";
 	}
+	
+	 @RequestMapping(value="/Cart")//{id}",method=RequestMethod.GET)
+	    public String addToCart(HttpSession ses)//@PathVariable("id") int id,Model model)
+	    {
+		 	String pid=(String)ses.getAttribute("pid");
+	    	System.out.println("addToCart"+"  pid="+pid);
+	    	
+	    	//model.addAttribute("products", p.getProductById(id));
+	    	ModelAndView mv = new ModelAndView();
+			mv.addObject("pList",p.viewProduct());
+	    	return "redirect:/productView"; //"productView";
+	    }
+	 
 	@RequestMapping(value={"/","/index"})
 	public String showIndex()
 	{
@@ -103,11 +126,8 @@ public class homeController {
 	@RequestMapping("/productView")
 	public ModelAndView dispProduct()
 	{
-		//dao.productDAOImpl prd=new dao.productDAOImpl();
-	//	prd.insertProduct();
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("pList",p.viewProduct());
-		
 		
 		return mv;
 	}
@@ -198,15 +218,10 @@ public class homeController {
         System.out.println("in editProduct() of homecontroller"+p.getProductById(id));
         return "product";
     }
-
-    @RequestMapping("/email")
-    public String email()
-    {
-    	System.out.println("inside email()");
-    	return "email";
-    }
+   
+   
    //for sending mail
-    @RequestMapping(value="/sendEmail",method = RequestMethod.POST)
+    @RequestMapping(value="/sendEmail")//,method=RequestMethod.POST )
     public String doSendEmail(HttpServletRequest request) {
         // takes input from e-mail form
         String recipientAddress = request.getParameter("recipient");

@@ -60,10 +60,10 @@ $(document).ready(function() {
 <nav class="navbar navbar-default role="navigator">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index"><img src="resources\images\logo.jpg" height="35" width="45"></a>
+      <a class="navbar-brand" href="/Flower/index"><img src="/Flower/webapp/resources/images/logo.jpg" height="35" width="45"></a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="index">Home</a></li>
+      <li class="active"><a href="/Flower/index">Home</a></li>
       
       <li class="dropdown">
          
@@ -71,13 +71,13 @@ $(document).ready(function() {
            <span class="caret"></span></a> 
           <ul class="dropdown-menu">
             <li><a href="#">About Us</a></li>
-            <li><a href="productView">Products</a></li>
+            <li><a href="/Flower/productView">Products</a></li>
             <li><a href="#">Category</a></li> 
           </ul>
         </li> 
       <li><a href="#">About Us</a></li>
       <li><a href="#">Category</a></li> 
-      <li><a href="productView">Products</a></li> 
+      <li><a href="/Flower/productView">Products</a></li> 
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="signup"><span class="glyphicon glyphicon-user" ></span> Sign Up</a></li>

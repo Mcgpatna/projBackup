@@ -33,7 +33,7 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
 <nav class="navbar navbar-default role="navigator">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="index"><img src="E:/MCG-TTT/DT-PROJECT/Flower/src/main/webapp/resources/images/logo.jpg" height="30" width="40"></a>
+      <a class="navbar-brand" href="index"><img src="/Flower/src/main/webapp/resources/images/logo.jpg" height="30" width="40"></a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="/Flower/index">Home</a></li>
@@ -93,7 +93,8 @@ src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></scrip
 
  <tr>
      <td colspan="2" align="center">
-          <a href="/myemail">Send E-mail</a>
+          <!-- <a href="/Flower/email">Send E-mail</a> -->
+          <a href="/Flower/email/${products.id}">Send E-mail</a>
      </td>
 </tr>
     

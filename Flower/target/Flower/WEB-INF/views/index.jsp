@@ -89,7 +89,7 @@
 </nav> 
 
  <%-- <jsp:include page="header.jsp" />  --%>
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="50000">
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="20000">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -103,7 +103,7 @@
     
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="resources\images\1aa.jpg" alt="Bitter Nutmeg is a tree up to 20 m tall" width="450" height="350">
+        <img src="resources\images\1aa.jpg" alt="Bitter Nutmeg is a tree up to 20 m tall" width="800" height="450">
         <div class="carousel-caption">
           <h3><font face="arial,helvetica">Bitter Nutmeg is a tree up to 20 m tall, often with stilt roots. Bark is brownish, warty, flaky; blaze reddish.</font></h3>
           
@@ -111,7 +111,7 @@
       </div>
       
       <div class="item">
-        <img src="resources\images\2aa.jpg" alt="Campbell's magnolia is a magnolia that grows in the forests of the Himalaya" width="480" height="350">
+        <img src="resources\images\2aa.jpg" alt="Campbell's magnolia is a magnolia that grows in the forests of the Himalaya" width="800" height="450">
         <div class="carousel-caption">
           <h3>Tulip Tree Is a deciduous tree native to North America, that can grow to heights of over 30 m with trunk diameters of 4-6 ft.</h3>
           

@@ -5,7 +5,7 @@
 <!DOCTYPE html>  
  <html>  
  <head>  
-   <title>Angular JS table sort and filter example </title>  
+   <title>Use of Angular JS table sort and filter </title>  
    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">  
    <script src="http://code.angularjs.org/1.4.8/angular.js"></script>  
    <script src="http://code.angularjs.org/1.4.8/angular-resource.js"></script>  
@@ -63,7 +63,7 @@
  <jsp:include page="header.jsp" />  
  <body ng-app="MyForm">  
    <div ng-controller="myCtrl">  
-     <h3>List students</h3>  
+     <h3>List for  Flowers of Tree</h3>  
      <div class="container-fluid">  
        <pre>Click header link to sort, input into filter text to filter</pre>  
        <hr />  
